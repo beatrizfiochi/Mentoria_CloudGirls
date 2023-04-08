@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function mostra(frase){
+		document.write(frase);
+	}
+	
+	var mediaIdade = 28;
+	var anoInicial = 1500;
+	var anoAtual = 2023;
+	var quantidadeDeGerações = (anoAtual - anoInicial)/mediaIdade;
+	
+	mostra("Desde 1500 até 2023, já se passaram " + Math.round(quantidadeDeGerações) + " gerações.");
+	pulaLinha();
+</script>
+

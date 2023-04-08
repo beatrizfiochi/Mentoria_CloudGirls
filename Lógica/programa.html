@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+<script>
+	document.write("A idade do Flávio é");
+	document.write("<br>");
+	document.write("18"); <!-- tipo texto (string) usar ("")-->
+	
+	document.write("<br>");
+	document.write(18+20); <!-- tipo número não utiliza "" e podemos fazer operações-->
+	document.write("<br>");
+	
+<!-- no javascript se usar + em string ocorrerá a concatenação dos textos-->
+	document.write ("18" + "20");
+	document.write("<br>");
+	
+	document.write("Flávio nasceu em ");
+	document.write(2023-38);
+	document.write("<br>");
+	document.write("A média das idades é ");
+	document.write((20+10+30)/3);
+	document.write("<br>");
+	document.write("A soma das idades é " + (20+10+30) + "<br>");
+	
+	var ano=2023;
+	document.write("Flávio nasceu em " + (ano - 38) + "<br>");
+	
+	ano=2024
+	document.write("Flávio tem " + (ano - 1985) + " anos <br>" );
+	
+	var idadeFlavio = 39; <!-- variável sempre começa com minusculo e se conter duas palavras a proxima vem em Maiusculo-->
+	var idadeJoaquim = 20;
+	var idadeBarney = 41;
+	var media = (idadeFlavio+idadeJoaquim+idadeBarney)/3;
+	document.write ("A média das idades é " + Math.round (media)); <!--para arredondar um numero-->
+	
+	var nome = "Flávio";
+	var puloLinha = "<br><br>"
+	document.write ( puloLinha + "A idade de " + nome + " é " + idadeFlavio + puloLinha);
+	
+</script>
+
+<!--É possível criar sua própria função em javaScript; por normal deve estar no início/nas primeiras instruções da minha tag script-->
+
+<script> <!-- tudo o que estiver dentro das chaves {} significa que pertence a função-->
+	function pulaLinha() { <!--função torna legível a intenção e é um conjunto de instruções-->
+		document.write("<br><br>");
+	}
+	
+	function mostra(frase) {
+		document.write(frase);
+	}
+	
+	var ano = 2023
+	
+	mostra("Olá pessoal!");
+	pulaLinha();
+	mostra("Flávio tem " + (ano - 1977) + " anos");
+	pulaLinha();
+	mostra("Joaquim tem " + (ano - 1996) + " anos");
+	pulaLinha ();
+	mostra("Barney tem " + (ano - 1980) + " anos");
+
+</script>
+
+<!--uma função pode chamar outra! veja o exemplo simplificando o anterior-->
+<script>
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+	
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	var ano = 2023
+	
+	pulaLinha()
+	mostra("Olá pessoal!");
+	mostra("Flávio tem " + (ano - 1977) + " anos");
+	mostra("Joaquim tem " + (ano - 1996) + " anos");
+	mostra("Barney tem " + (ano - 1980) + " anos");
+	
+</script>

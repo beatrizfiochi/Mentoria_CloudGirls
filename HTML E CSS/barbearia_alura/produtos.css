@@ -1,0 +1,102 @@
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0; /*padding é usado para adicionar espaçamento interno*/
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto; /*o auto centraliza automaticamente*/
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li{
+    display: inline-block; /*coloco em linha porém posso manipular o tamanho que quero*/
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5% ; /*primeiro para cima e para baixo e depois para as laterais*/ 
+    padding: 30px 20px; /*primeiro para cima e para baixo e depois para as laterais*/ 
+    box-sizing: border-box; /*faz com que o espaçamento da largura (30%) seja fixo*/
+    border: 2px solid black; /*borda - tamanho/ tipo/ cor*/
+    border-radius: 10px; /*para arredondar a borda no tamanho que eu definir*/
+}
+
+/*para realçar uma característica quando o mouse estiver por cima usamos :hover/ nesse caso estamos ativando os produtos listados e mudando a cor da borda*/
+.produtos li:hover{
+    border-color: #C78C19;
+}
+
+/*para realçar uma característica quando o mouse estiver pressionado usamos :active/ nesse caso estamos ativando os produtos listados e mudando a cor da borda*/
+.produtos li:active{
+    border-color: blueviolet;
+}
+
+/*agora quero que quando o mouse estiver por cima dos itens listados (li), mude o tamanho de h2 e a cor*/
+.produtos li:hover h2{
+    font-size: 32px;
+    color: #C78C19;
+}
+
+/*agora quero que quando o mouse estiver pressionando os itens listados (li), mude o tamanho de h2 e a cor*/
+.produtos li:active h2{
+    font-size: 32px;
+    color: blueviolet;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produtos-preco{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /*Quando colocamos uma imagem de fundo em um elemento, o CSS, por padrão, copia e cola a imagem diversas vezes até ocupar todo o espaço do elemento*/
+    background: url("bg.jpg"); /*para adicionarmos uma imagem de fundo em um elemento utilizamos url*/
+    padding: 40px 0;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px 0;
+}

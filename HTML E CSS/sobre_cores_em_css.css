@@ -1,0 +1,16 @@
+cores hexadecimais 
+0123456789ABCDEF
+RGB = Red Green Blue
+#_ _ _ _ _ _
+0 = ausência
+F = máximo
+preto #000000
+branco #FFFFFF
+vermelho #FF0000
+
+RGB 0123...255
+0 ausência
+255 máximo
+
+rgb(255,255,255) branco
+rgb(0,0,255) azul

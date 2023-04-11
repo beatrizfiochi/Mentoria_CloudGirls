@@ -36,8 +36,8 @@ for(var i = 0; i < pacientes.length; i++){
     }
 
     if (pesoEhValido && alturaEhValida){
-        var imc = peso/(altura*altura);
-        tdImc.textContent = imc.toFixed(2); //.toFixed arredonda o número de casas decimais que eu defino, neste caso, 2 casas decimais
+        var imc = calculaImc(peso,altura);
+        tdImc.textContent = imc;
     }
 
 }
@@ -50,3 +50,8 @@ console.log(tdAltura); //td que tem a altura
 console.log(altura); //obter o valor (2.00)
 console.log(imc);*/
 
+function calculaImc(peso, altura){
+    var imc = 0;
+    imc = peso/(altura*altura);
+    return imc.toFixed(2); //.toFixed arredonda o número de casas decimais que eu defino, neste caso, 2 casas decimais;
+}

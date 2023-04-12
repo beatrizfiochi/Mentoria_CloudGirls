@@ -18,17 +18,17 @@ for(var i = 0; i < pacientes.length; i++){
 
     var tdImc = paciente.querySelector(".info-imc");
 
-    var pesoEhValido = true;
-    var alturaEhValida = true;
+    var pesoEhValido = validaPeso(peso);
+    var alturaEhValida = validaAltura(altura);
 
-    if (peso <= 0 || peso >= 1000){  // || significa ou
+    if (!pesoEhValido){  // || significa ou
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido!";
         paciente.classList.add("paciente-invalido"); //para alterar aspecto visual na página, utilizo o css, por isso não faço as alterações direto aqui, como por exemplo usar paciente.style.backgroundColor("orange") no js - assim, utilizando o css, eu só altero 1x em apenas um local, ao invés de ter q buscar pelo meu código todo locais que necessitam de alterações.
     }
 
-    if (altura <= 0 || altura >= 3.00){
+    if (!alturaEhValida){
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida!";
@@ -54,4 +54,28 @@ function calculaImc(peso, altura){
     var imc = 0;
     imc = peso/(altura*altura);
     return imc.toFixed(2); //.toFixed arredonda o número de casas decimais que eu defino, neste caso, 2 casas decimais;
+}
+
+function validaPeso(peso){
+    if(peso >= 0 && peso < 1000){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validaAltura(altura){
+    if(altura >= 0 && altura <= 3.0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validaGordura(gordura){
+    if(gordura>= 0 && gordura <= 100){
+        return true;
+    } else {
+        return false;
+    }
 }

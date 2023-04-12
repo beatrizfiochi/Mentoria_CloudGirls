@@ -4,7 +4,34 @@ botaoAdicionar.addEventListener("click", function(event){  /*escutar evento*/
    event.preventDefault(); /*previne comportamentos padrões dos usuários do browser*/
 
    var form = document.querySelector("#form-adiciona");
-// Extraindo informações do paciente do form
+    // Extraindo informações do paciente do form
+
+    var paciente = obtemInformacoesDoForm(form);
+
+    //Cria Tr e Td do paciente
+
+    var pacienteTr = montaTr(paciente);
+
+    //validar paciente 
+
+    var erros = validaPaciente(paciente);
+    console.log(erros);
+
+    if (erros.length > 0){
+        exibeMensagensDeErro(erros);
+        return;
+    }
+
+    //adicionando o paciente na tabela    
+        var tabela = document.querySelector("#tabela-pacientes");
+
+        tabela.appendChild(pacienteTr);
+
+        form.reset();
+
+        var mensagensErro = document.querySelector("#mensagens-erro");
+        mensagensErro.innerHTML = "";
+});
 
 function obtemInformacoesDoForm(form){
     var paciente = {
@@ -16,10 +43,6 @@ function obtemInformacoesDoForm(form){
     }
     return paciente;
 }
-
-var paciente = obtemInformacoesDoForm(form);
-
-//Cria Tr e Td do paciente
 
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
@@ -34,8 +57,6 @@ function montaTr(paciente){
     return pacienteTr;
 }
 
-var pacienteTr = montaTr(paciente);
-
 function montaTd(dado, classe){
     var td = document.createElement("td");
     td.textContent = dado;
@@ -44,10 +65,49 @@ function montaTd(dado, classe){
     return td;
 }
 
-//adicionando o paciente na tabela    
-    var tabela = document.querySelector("#tabela-pacientes");
+function validaPaciente(paciente){
 
-    tabela.appendChild(pacienteTr);
+    var erros = [];
 
-    form.reset();
-})
+    if(paciente.nome.length == 0){
+        erros.push("Preencha o nome.");
+    }
+
+    if(paciente.peso.length == 0){
+        erros.push("Preencha o peso.");
+    }
+
+    if(paciente.altura.length == 0){
+        erros.push("Preencha a altura.");
+    }
+
+    if(paciente.gordura.length == 0){
+        erros.push("Preencha % de gordura.");
+    }
+
+    if(!validaPeso(paciente.peso)){
+        erros.push("Peso é inválido!");     
+    }
+
+    if(!validaAltura(paciente.altura)){
+      erros.push("Altura é inválida!");   
+    }
+
+    if(!validaGordura(paciente.gordura)){
+        erros.push("% Gordura é inválida!");
+    }
+
+    return erros;
+}
+
+function exibeMensagensDeErro(erros){
+    var ul = document.querySelector("#mensagens-erro");
+
+    ul.innerHTML = "";
+
+    erros.forEach(function(erro){
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+        });
+}

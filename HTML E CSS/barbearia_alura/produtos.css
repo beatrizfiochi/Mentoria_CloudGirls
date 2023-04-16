@@ -1,6 +1,6 @@
 header{
-    background-color: #BBBBBB;
-    padding: 20px 0; /*padding é usado para adicionar espaçamento interno*/
+    background: url("tijolinhos.jpg");
+    padding: 10px 0; /*padding é usado para adicionar espaçamento interno*/
 }
 
 .caixa{
@@ -29,7 +29,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #C78C19;
+    color: darkslategrey;
     text-decoration: underline;
 }
 
@@ -53,24 +53,24 @@ nav a:hover{
 
 /*para realçar uma característica quando o mouse estiver por cima usamos :hover/ nesse caso estamos ativando os produtos listados e mudando a cor da borda*/
 .produtos li:hover{
-    border-color: #C78C19;
+    border-color: darkslategrey;
 }
 
 /*para realçar uma característica quando o mouse estiver pressionado usamos :active/ nesse caso estamos ativando os produtos listados e mudando a cor da borda*/
 .produtos li:active{
-    border-color: blueviolet;
+    border-color: cadetblue;
 }
 
 /*agora quero que quando o mouse estiver por cima dos itens listados (li), mude o tamanho de h2 e a cor*/
 .produtos li:hover h2{
-    font-size: 32px;
-    color: #C78C19;
+    font-size: 35px;
+    color: darkslategrey;
 }
 
 /*agora quero que quando o mouse estiver pressionando os itens listados (li), mude o tamanho de h2 e a cor*/
 .produtos li:active h2{
     font-size: 32px;
-    color: blueviolet;
+    color: cadetblue;
 }
 
 .produtos h2{

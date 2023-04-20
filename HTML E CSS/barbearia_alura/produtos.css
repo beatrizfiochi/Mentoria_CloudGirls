@@ -1,3 +1,7 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
 header{
     background: url("tijolinhos.jpg");
     padding: 10px 0; /*padding é usado para adicionar espaçamento interno*/
@@ -63,7 +67,7 @@ nav a:hover{
 
 /*agora quero que quando o mouse estiver por cima dos itens listados (li), mude o tamanho de h2 e a cor*/
 .produtos li:hover h2{
-    font-size: 35px;
+    font-size: 31px;
     color: darkslategrey;
 }
 

@@ -137,3 +137,23 @@ footer{
     font-size: 13px;
     margin: 20px 0;
 }
+
+@media screen and (max-width: 480px) {
+    .logo, .contatos{
+        width: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .formulario{
+        width: auto;
+        margin-left: 25px;
+    }
+
+}

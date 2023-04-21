@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="formulario">
         <form>
             <label for="nomeesobrenome">Nome e sobrenome</label>
             <input type="text" id="nomeesobrenome" class="input-padrao" required>
@@ -41,17 +41,17 @@
 
             <fieldset>
                 <legend>Como prefere o nosso contato?</legend>
-                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label>
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email" class="dados-contato">E-mail</label>
                 
-                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone" class="dados-contato">Telefone</label>
                 
-                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" class="dados-contato" checked>Whatsapp</label>
                 
             </fieldset>
 
             <fieldset>
                 <legend>Qual o melhor período para ser contactado?</legend>
-                <select>
+                <select class="periodos-contato">
                     <option>Manhã</option>
                     <option>Tarde</option>
                     <option>Noite</option>

@@ -1,3 +1,7 @@
+body{
+    overflow: scroll;
+}
+
 .frase{
     font-size: 20px;
     text-align: left;
@@ -23,4 +27,25 @@
 
 .icones{
     vertical-align: middle;
+}
+
+.placar{
+    display: none;
+}
+
+#erro{
+    color: red;
+    display: none;
+}
+
+#spinner{
+    display: none;
+}
+
+#frase-id{
+    width: 50px;
+}
+
+#botao-sync{
+    float: right;
 }

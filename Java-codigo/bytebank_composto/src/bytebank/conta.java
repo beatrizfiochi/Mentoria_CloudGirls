@@ -1,7 +1,7 @@
 package bytebank;
 
 public class conta {
-	double saldo;
+	private double saldo;
 	int agencia;
 	int numero;
 	Cliente titular;
@@ -27,5 +27,9 @@ public class conta {
 		}else {
 			return false;
 		}
+	}
+	
+	public double getSaldo(){
+		return this.saldo;
 	}
 }

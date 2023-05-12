@@ -1,6 +1,6 @@
 package bytebank_herdado;
 
-//Gerente eh um Funcionario ou Gerente gerda da class Funcionario
+//Gerente eh um Funcionario ou Gerente herda da class Funcionario
 public class Gerente extends Funcionario{
 
 	private int senha;

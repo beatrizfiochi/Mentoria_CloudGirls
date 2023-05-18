@@ -8,4 +8,6 @@ public class Designer extends Funcionario{
 	}
 	
 	
+	//outra forma de não forçar o compilador há termos o método que foi definido como abstrato na classe Funcionario é deixar essa classe abstrata tbm, porém dessa forma nao podemos dar new.
+	
 }

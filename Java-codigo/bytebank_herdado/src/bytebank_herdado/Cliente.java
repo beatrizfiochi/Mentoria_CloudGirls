@@ -1,16 +1,11 @@
 package bytebank_herdado;
 
-//Gerente eh um Funcionario ou Gerente herda da class Funcionario, assina o contrato Autenticavel ou eh um Autenticavel
-public class Gerente extends Funcionario implements Autenticavel{
+public class Cliente implements Autenticavel {
 
 	private AutenticacaoUtil autenticador;
 	
-	public Gerente() {
+	public Cliente() {
 		this.autenticador = new AutenticacaoUtil();
-	}
-	
-	public double getBonificacao() {
-		return super.getSalario();
 	}
 	
 	@Override

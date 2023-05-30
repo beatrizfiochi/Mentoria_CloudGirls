@@ -5,7 +5,7 @@ public abstract class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
-	private static int total;
+	private static int total = 0;
 	
 	public Conta(int agencia, int numero) {
 		Conta.total++;
@@ -24,14 +24,9 @@ public abstract class Conta {
 		this.saldo -= valor;
 	}
 	
-	public boolean transfere(double valor, Conta destino){
-		if(this.saldo >= valor) {
-			this.saldo -= valor;
-			destino.deposita(valor);
-			return true;
-		}else {
-			return false;
-		}
+	public void transfere(double valor, Conta destino) throws SaldoinsuficienteException{
+		this.saca(valor);
+        destino.deposita(valor);
 	}
 	
 	public double getSaldo(){
@@ -67,7 +62,7 @@ public abstract class Conta {
 	}
 	
 	public Cliente getTitular() {
-		return titular;
+		return this.titular;
 	}
 	
 	public static int getTotal() {

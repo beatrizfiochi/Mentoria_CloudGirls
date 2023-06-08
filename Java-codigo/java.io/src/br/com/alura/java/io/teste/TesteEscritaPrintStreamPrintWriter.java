@@ -1,12 +1,10 @@
 package br.com.alura.java.io.teste;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class TesteEscrita3 {
+public class TesteEscritaPrintStreamPrintWriter {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -18,7 +16,7 @@ public class TesteEscrita3 {
 		
 //		BufferedWriter bw = new BufferedWriter(new FileWriter("lorem4.txt"));
 		
-		PrintWriter ps = new PrintWriter("lorem5.txt"); //PrintStream ps = new PrintStream("lorem5.txt");
+		PrintWriter ps = new PrintWriter("lorem5.txt", "UTF-8"); //PrintStream ps = new PrintStream("lorem5.txt");
 		ps.println("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ");
 		ps.println();
 		ps.println();
